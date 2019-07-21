@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>vue-project-demo</title>
+    <script>
+      var MP_CUR_TIME = +new Date;
+      !function(e) {
+        var t = e.document
+          , n = t.documentElement
+          , i = e.devicePixelRatio || 1
+          , a = "orientationchange"in e ? "orientationchange" : "resize"
+          , d = function() {
+          var e = n.getBoundingClientRect().width || 360;
+          (1 == i || 720 < e) && (e = 720),
+            n.style.fontSize = e / 7.2 + "px"
+        };
+        n.setAttribute("data-dpr", i),
+        t.addEventListener && (e.addEventListener(a, d, !1),
+        "complete" === t.readyState || t.addEventListener("DOMContentLoaded", function() {
+          setTimeout(d)
+        }, !1))
+      }(window)
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but vue-project-demo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

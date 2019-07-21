@@ -1,0 +1,42 @@
+{
+  "name": "vue-mi",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --project-mode dev",
+    "test": "vue-cli-service serve --project-mode test",
+    "pro": "vue-cli-service serve --project-mode pro",
+    "pre": "vue-cli-service serve --project-mode pre",
+    "build:dev": "vue-cli-service build --project-mode dev",
+    "build:test": "vue-cli-service build --project-mode test",
+    "build:pro": "vue-cli-service build --project-mode pro",
+    "build:pre": "vue-cli-service build --project-mode pre",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.1",
+    "element-ui": "^2.4.8",
+    "js-cookie": "^2.2.0",
+    "node-sass": "^4.12.0",
+    "nprogress": "^0.2.0",
+    "vue": "^2.5.21",
+    "vue-axios": "^2.1.4",
+    "vue-router": "^3.0.1",
+    "vuetify": "^1.5.16",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "svg-sprite-loader": "^3.9.2",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
