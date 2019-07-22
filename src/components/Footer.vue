@@ -1,9 +1,9 @@
 <template>
   <v-card flat>
-    <Navbar v-show="bottomNav == 'home'"></Navbar>
-    <Category v-show="bottomNav == 'category'"></Category>
-    <ShopCart v-show="bottomNav == 'category'"></ShopCart>
-    <Mine v-show="bottomNav == 'category'"></Mine>
+    <navbar v-show="bottomNav == 'home'"></navbar>
+    <category v-show="bottomNav == 'category'"></category>
+    <shop-cart v-show="bottomNav == 'ShopCart'"></shop-cart>
+    <mine v-show="bottomNav == 'mine'"></mine>
     <v-bottom-nav
       :active.sync="bottomNav"
       :value="true"
@@ -31,7 +31,7 @@
       <v-btn
         color="teal"
         flat
-        value="car"
+        value="ShopCart"
       >
         <span>购物车</span>
         <v-icon>place</v-icon>
@@ -40,7 +40,7 @@
       <v-btn
         color="teal"
         flat
-        value="user"
+        value="mine"
       >
         <span>我的</span>
         <v-icon>place</v-icon>

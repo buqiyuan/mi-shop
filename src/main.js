@@ -3,9 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-import ElementUI from 'element-ui'
 import Cookies from 'js-cookie'
-import 'element-ui/lib/theme-chalk/index.css'
 
 import '@/styles/index.scss'
 import '@/icons'
@@ -20,14 +18,13 @@ import VueAxios from 'vue-axios'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont'
+import VueLazyload from 'vue-lazyload'
+
+Vue.use(VueLazyload)
 
 Vue.use(VueAxios, axios)
 
 Vue.use(Vuetify)
-
-Vue.use(ElementUI, {
-  size: Cookies.get('size') || 'medium' // set element-ui default size
-})
 
 // 注册过滤器
 for (let key in filters) {

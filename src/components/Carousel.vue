@@ -1,14 +1,14 @@
 <template>
   <div class="home-carousel">
     <v-carousel
-      height="210"
+      height="3.66rem"
       :cycle="cycle"
       hide-controls
     >
       <v-carousel-item
         v-for="(item,i) in items"
         :key="i"
-        height="210"
+        height="3.66rem"
         :src="item.img_url"
       ></v-carousel-item>
     </v-carousel>

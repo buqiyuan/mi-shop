@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-   <Home></Home>
     <!--<content-view></content-view>-->
     <!--<request-loding></request-loding>-->
+<router-view></router-view>
   </div>
 </template>
 

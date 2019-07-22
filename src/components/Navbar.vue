@@ -45,17 +45,17 @@
 
     <v-tabs-items touchless v-model="active">
 
-      <home-tab v-for="(item,index) in apis"
-                :key="index" :className="'card'+(index+1)" :apiUrl="item"></home-tab>
+      <home-tabs v-for="(item,index) in apis"
+                :key="index" :className="'card'+(index+1)" :apiUrl="item"></home-tabs>
     </v-tabs-items>
   </div>
 </template>
 
 <script>
-  import HomeTab from '@/components/HomeSubPages/HomeTab'
+  import HomeTabs from '@/components/HomeSubPages/HomeTabs'
 
   export default {
-    components: {HomeTab},
+    components: {HomeTabs},
     data() {
       return {
         tabs: [],

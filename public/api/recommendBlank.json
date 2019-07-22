@@ -1,0 +1,330 @@
+{
+  "code": 0,
+  "data": {
+    "header": {
+      "view_type": "cells_auto_fill",
+      "body": {
+        "w": 720,
+        "h": 120,
+        "height": "0",
+        "width": "0",
+        "items": [
+          {
+            "w": 720,
+            "h": 120,
+            "img_url": "//i8.mifile.cn/b2c-mimall-media/e95ade2750a7fde92369b416c7d3176d.jpg",
+            "path_type": "image",
+            "margin_left": 0,
+            "margin_right": 0
+          }
+        ],
+        "margin_left": 0,
+        "margin_right": 0
+      }
+    },
+    "recom_list": [
+      {
+        "action": {
+          "type": "product",
+          "path": "10138",
+          "log_code": "recom_list_0-1#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10138",
+          "recommend_code": "recom_list_0-1#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10138"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/477b561ea6b00e77e041ea73c881974e.jpg",
+        "is_multi_price": false,
+        "market_price": "1999",
+        "name": "小米CC9 6GB+128GB",
+        "price": "1999",
+        "product_desc": "\u003cfont color='#ff4a00'\u003e「新品火爆热卖中，享花呗6期免息，+19元可得果冻包」\u003c/font\u003e前置3200万自拍 / 索尼4800万超广角三摄 / 多色炫彩轻薄机身 / 6.39英寸三星 AMOLED水滴屏 /4030mAh大电量 /  骁龙710处理器 / 屏幕指纹 / NFC功能 / 红外遥控功能 / Game Turbo2.0游戏加速",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "10136",
+          "log_code": "recom_list_0-2#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10136",
+          "recommend_code": "recom_list_0-2#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10136"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/477b561ea6b00e77e041ea73c881974e.jpg",
+        "is_multi_price": false,
+        "market_price": "1799",
+        "name": "小米CC9 6GB+64GB",
+        "price": "1799",
+        "product_desc": "\u003cfont color='#ff4a00'\u003e「新品火爆热卖中，享花呗6期免息，+19元可得果冻包」\u003c/font\u003e前置3200万自拍 / 索尼4800万超广角三摄 / 多色炫彩轻薄机身 / 6.39英寸三星 AMOLED水滴屏 /4030mAh大电量 /  骁龙710处理器 / 屏幕指纹 / NFC功能 / 红外遥控功能 / Game Turbo2.0游戏加速",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "10150",
+          "log_code": "recom_list_0-3#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10150",
+          "recommend_code": "recom_list_0-3#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10150"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/3cc16c79affe652394b7436c8624640e.jpg",
+        "is_multi_price": false,
+        "market_price": "299",
+        "name": "飞利浦吸顶灯卧室28W",
+        "price": "299",
+        "product_desc": "正背双面发光灯罩 / 动态日光算法 / WiFi 蓝牙双模 / 色温亮度无级调节",
+        "product_tag": "//i8.mifile.cn/v1/a1/289039eb-c3ed-7c26-69c3-5b07b72a797d.webp?w=120\u0026h=48"
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "9995",
+          "log_code": "recom_list_0-4#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=9995",
+          "recommend_code": "recom_list_0-4#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=9995"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/ba2e3cf34aa9dfd78e51fd72cb26e81f.png",
+        "is_multi_price": false,
+        "market_price": "229",
+        "name": "小米手环4 NFC版",
+        "price": "229",
+        "product_desc": "\u003cfont color='#ff4a00'\u003e「火爆预约中，7月23号上午10点开售」\u003c/font\u003e全新 AMOLED 大屏彩显，手环刷公交卡、门禁卡，能用支付宝抬手支付。内置小爱同学语音助理，能遥控智能家居。50米防水，支持游泳模式。还能看微信、看来电、测心率、测睡眠。带上它，你的改变从今天开始。",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "8037",
+          "log_code": "recom_list_0-5#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8037",
+          "recommend_code": "recom_list_0-5#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8037"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/1ead740b0b821cc3fe5f9f8161cc4fa3.jpg",
+        "is_multi_price": false,
+        "market_price": "2999",
+        "name": "小米电视4S 55英寸 曲面",
+        "price": "2999",
+        "product_desc": "4000R 黄金曲率 | 4K HDR | 人工智能语音 | 2GB+8GB 大内存 | 金属机身 | 杜比音效 | 海量片源",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "7865",
+          "log_code": "recom_list_0-6#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=7865",
+          "recommend_code": "recom_list_0-6#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=7865"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/d67b10a1ab4a6a3d4bdc7c32d5493954.jpg",
+        "is_multi_price": false,
+        "market_price": "599",
+        "name": "悦米机械键盘Pro静音版",
+        "price": "599",
+        "product_desc": "CNC全铝机身，精致由内到外 ／ TTC静音红轴，享受静谧好手感 ／ 细腻触感，经久耐用",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "8750",
+          "log_code": "recom_list_0-7#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8750",
+          "recommend_code": "recom_list_0-7#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8750"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/c0bee80d76b0d3da60013c86a8e773ca.jpg",
+        "is_multi_price": false,
+        "market_price": "2099",
+        "name": "小米平板4 Plus 10英寸 LTE版 128GB",
+        "price": "2099",
+        "product_desc": "10.1\"全高清大屏 /  8620mAh大容量电池，超长续航 / 支持AI人脸识别 / 后置1300万，前置500万摄像头 / 金属机身，超窄边框 / 骁龙660八核处理器",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "10161",
+          "log_code": "recom_list_0-8#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10161",
+          "recommend_code": "recom_list_0-8#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10161"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/cc1422f061017fe49a2a9bb0b4e190b0.jpg",
+        "is_multi_price": false,
+        "market_price": "1299",
+        "name": "小米CC9e 4GB+64GB",
+        "price": "1299",
+        "product_desc": "\u003cfont color='#ff4a00'\u003e「新品热卖中，+10元可得18W快充，+19元可得果冻包」\u003c/font\u003e前置3200万自拍 / 索尼4800万超广角三摄 / 4030mAh大电量 / 3D全曲面玻璃机身，浪漫满分的全新配色 / 6.088英寸三星 AMOLED水滴屏 /第七代屏幕指纹 / 首发骁龙665处理器 / 全新Mimoji萌拍 / 红外遥控功能",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "10162",
+          "log_code": "recom_list_0-9#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10162",
+          "recommend_code": "recom_list_0-9#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10162"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/7cb7df22c9d4cf6ec93f5a42f9108482.jpg",
+        "is_multi_price": false,
+        "market_price": "1399",
+        "name": "小米CC9e 6GB+64GB",
+        "price": "1399",
+        "product_desc": "\u003cfont color='#ff4a00'\u003e「新品热卖中，+10元可得18W快充，+19元可得果冻包」\u003c/font\u003e前置3200万自拍 / 索尼4800万超广角三摄 / 4030mAh大电量 / 3D全曲面玻璃机身，浪漫满分的全新配色 / 6.088英寸三星 AMOLED水滴屏 /第七代屏幕指纹 / 首发骁龙665处理器 / 全新Mimoji萌拍 / 红外遥控功能",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "10149",
+          "log_code": "recom_list_0-10#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10149",
+          "recommend_code": "recom_list_0-10#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=10149"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/7cb7df22c9d4cf6ec93f5a42f9108482.jpg",
+        "is_multi_price": false,
+        "market_price": "1599",
+        "name": "小米CC9e 6GB+128GB",
+        "price": "1599",
+        "product_desc": "\u003cfont color='#ff4a00'\u003e「新品热卖中，+10元可得18W快充，+19元可得果冻包」\u003c/font\u003e前置3200万自拍 / 索尼4800万超广角三摄 / 4030mAh大电量 / 多色炫彩轻薄机身 / 6.088英寸三星 AMOLED水滴屏 / 首发骁龙665处理器 / 第七代屏幕指纹 / 全新Mimoji萌拍 / 红外遥控功能",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "8247",
+          "log_code": "recom_list_0-11#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8247",
+          "recommend_code": "recom_list_0-11#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8247"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/61e8e1914b322f8e2ec52ea309b37f46.jpg",
+        "is_multi_price": false,
+        "market_price": "19",
+        "name": "红米 6 Pro 标准高透保护膜",
+        "price": "9",
+        "product_desc": "0.8%雾度 ／ 92%以上透光度 ／ 大于2H硬度 ／ PET材质",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "8335",
+          "log_code": "recom_list_0-12#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8335",
+          "recommend_code": "recom_list_0-12#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8335"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/fc811e231a8a0507687472d505f512c2.jpg",
+        "is_multi_price": false,
+        "market_price": "948",
+        "name": "米连卡随身路由器套装",
+        "price": "599",
+        "product_desc": "4G全网通吃 ／ 光纤级4G网速 ／ 移动制式，全网通用",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "7809",
+          "log_code": "recom_list_0-13#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=7809",
+          "recommend_code": "recom_list_0-13#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=7809"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/5879e63da2a64af293c914c642fbc154.jpg",
+        "is_multi_price": false,
+        "market_price": "2599",
+        "name": "小米电视4S 55英寸",
+        "price": "2599",
+        "product_desc": "4K HDR / 人工智能语音 / 金属机身 / 2GB+8GB 大存储 / 杜比解码 / 海量片源",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "9677",
+          "log_code": "recom_list_0-14#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=9677",
+          "recommend_code": "recom_list_0-14#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=9677"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/c0144994b4df48d7a9cdd931afe3ff80.jpg",
+        "is_multi_price": false,
+        "market_price": "3299",
+        "name": "小米电视4S 58英寸",
+        "price": "3299",
+        "product_desc": "4K HDR超高清画质 / 金属机身 / 2GB+8GB大内存 / 人工智能语音 / 64位四核处理器 / 内置小爱同学",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "9451",
+          "log_code": "recom_list_0-15#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=9451",
+          "recommend_code": "recom_list_0-15#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=9451"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/fa9e46d406951b62959659e0ba51e092.jpg",
+        "is_multi_price": false,
+        "market_price": "39",
+        "name": "ZMI 苹果数据线 1m",
+        "price": "39",
+        "product_desc": "最新支持iOS12 / 苹果官方MFi认证 / 数据传输 / 充电功能",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "8003",
+          "log_code": "recom_list_0-16#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8003",
+          "recommend_code": "recom_list_0-16#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8003"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/4510417cc032e147de425280c81b7e8c.jpg",
+        "is_multi_price": false,
+        "market_price": "478",
+        "name": "8H护颈乳胶枕两件装",
+        "price": "438",
+        "product_desc": "泰国天然乳胶 ／ 三曲线护颈 ／ CleanCool内枕芯 ／ 天竺棉外枕套 ／ 全面抗菌 ／ 真心价格",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "4086",
+          "log_code": "recom_list_0-17#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=4086",
+          "recommend_code": "recom_list_0-17#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=4086"
+        },
+        "image_url": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/aedea46891f880dc6ff39958c6190822.jpg",
+        "is_multi_price": false,
+        "market_price": "9.9",
+        "name": "米家签字笔",
+        "price": "9.9",
+        "product_desc": "瑞士进口笔芯，高流量油墨设计，不易断墨 / 日本进口油墨，快干不溢墨 / 9.5mm 舒适握感",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "7919",
+          "log_code": "recom_list_0-18#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=7919",
+          "recommend_code": "recom_list_0-18#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=7919"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/744f6ac43135ec89fbe493491f79394b.jpg",
+        "is_multi_price": false,
+        "market_price": "349",
+        "name": "小米游戏耳机",
+        "price": "299",
+        "product_desc": "7.1 虚拟环绕立体声引擎 ／ LED 炫彩游戏光效 ／ 40mm创新喇叭单元设计 ／ 双麦克风 ENC 环境降噪技术 ／ 双接口可拆换技术",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "9652",
+          "log_code": "recom_list_0-19#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=9652",
+          "recommend_code": "recom_list_0-19#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=9652"
+        },
+        "image_url": "//cdn.cnbj1.fds.api.mi-img.com/mi-mall/4fd0ab4378e36709be29d4f579b206c1.jpg",
+        "is_multi_price": false,
+        "market_price": "799",
+        "name": "AMAZFIT 智能手表",
+        "price": "799",
+        "product_desc": "NFC百城交通卡 / 智能家居控制 / 内置小爱同学 / AMOLED炫彩显示屏 / GPS+GLONASS",
+        "product_tag": ""
+      },
+      {
+        "action": {
+          "type": "product",
+          "path": "8104",
+          "log_code": "recom_list_0-20#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8104",
+          "recommend_code": "recom_list_0-20#eid=15:12:0:0:0:0:0:0:0:0\u0026tid=BlankRec-jAM6pVFgjzKdV/NBuWAXLg==\u0026page=list\u0026pid=8104"
+        },
+        "image_url": "//i8.mifile.cn/b2c-mimall-media/b2468d7b18e74bb2667f55230c826adb.jpg",
+        "is_multi_price": false,
+        "market_price": "399",
+        "name": "后视镜行车记录仪",
+        "price": "399",
+        "product_desc": "语音控制 ／ 5英寸IPS大屏 ／ 停车监控 ／ 前后双录",
+        "product_tag": ""
+      }
+    ],
+    "title": "为你推荐"
+  },
+  "result": "ok"
+}
