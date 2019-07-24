@@ -1,9 +1,14 @@
 <template>
   <v-card flat>
-    <navbar v-show="bottomNav == 'home'"></navbar>
-    <category v-show="bottomNav == 'category'"></category>
-    <shop-cart v-show="bottomNav == 'ShopCart'"></shop-cart>
-    <mine v-show="bottomNav == 'mine'"></mine>
+
+    <!--<category v-if="bottomNav == 'category'"></category>-->
+    <!--<shop-cart v-if="bottomNav == 'ShopCart'"></shop-cart>-->
+    <!--<mine v-if="bottomNav == 'mine'"></mine>-->
+    <transition>
+      <keep-alive>
+    <router-view></router-view>
+      </keep-alive>
+    </transition>
     <v-bottom-nav
       :active.sync="bottomNav"
       :value="true"
@@ -11,39 +16,43 @@
       color="transparent"
     >
       <v-btn
-        color="teal"
+        color="#ff6700"
         flat
         value="home"
+        @click="$router.push('home')"
       >
         <span>首页</span>
-        <v-icon>history</v-icon>
+        <v-icon>home</v-icon>
       </v-btn>
 
       <v-btn
-        color="teal"
+        color="#ff6700"
         flat
         value="category"
+        @click="$router.push('category')"
       >
         <span>分类</span>
-        <v-icon>favorite</v-icon>
+        <v-icon>image_search</v-icon>
       </v-btn>
 
       <v-btn
-        color="teal"
+        color="#ff6700"
         flat
         value="ShopCart"
+        @click="$router.push('shopcart')"
       >
         <span>购物车</span>
-        <v-icon>place</v-icon>
+        <v-icon>shopping_cart</v-icon>
       </v-btn>
 
       <v-btn
-        color="teal"
+        color="#ff6700"
         flat
         value="mine"
+        @click="$router.push('mine')"
       >
         <span>我的</span>
-        <v-icon>place</v-icon>
+        <v-icon>person_outline</v-icon>
       </v-btn>
     </v-bottom-nav>
   </v-card>
@@ -51,12 +60,9 @@
 
 <script>
   import Navbar from '@/components/Navbar.vue'
-  import Category from '@/components/Category.vue'
-  import ShopCart from '@/components/ShopCart.vue'
-  import Mine from '@/components/Mine.vue'
 
   export default {
-    components: {Navbar, Category, ShopCart, Mine},
+    components: {Navbar},
     data() {
       return {
         bottomNav: 'home'

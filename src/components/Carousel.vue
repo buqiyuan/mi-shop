@@ -3,6 +3,7 @@
     <v-carousel
       height="3.66rem"
       :cycle="cycle"
+      hide-delimiter-background
       hide-controls
     >
       <v-carousel-item

@@ -6,9 +6,10 @@
 
           <Carousel :items="item.body.items" v-if="item.view_type == 'gallery'"></Carousel>
 
-          <div v-else-if="item.view_type == 'cells_auto_fill'" :style="{width:item.body.w / 100 + 'rem',height:item.body.h / 100 + 'rem'}"
+          <div v-else-if="item.view_type == 'cells_auto_fill'"
+               :style="{width:item.body.w / 100 + 'rem',height:item.body.h / 100 + 'rem'}"
                :class="[item.view_type, 'multi_cell']">
-            <a class="items" href="" v-for="(item,index) in item.body.items" :key="index"
+            <a class="items" v-for="(item,index) in item.body.items" :key="index"
                :style="{width:item.w / 100 + 'rem',height:item.h / 100 + 'rem',left:item.x / 100 + 'rem',top:item.y / 100 + 'rem'}">
               <img v-lazy="item.img_url" alt="">
             </a>
@@ -19,24 +20,39 @@
                backgroundColor:item.body.line_color}">
           </div>
 
-          <div v-else-if="item.view_type == 'list_one_type14'" :class="[item.view_type, 'box-flex']" :style="{backgroundColor: item.body.bg_color}">
-            <a v-for="(item,index) in item.body.items" :key="index" class="exposure item">
+          <div v-else-if="item.view_type == 'list_one_type14'" :class="[item.view_type, 'box-flex']"
+               :style="{backgroundColor: item.body.bg_color}">
+            <a @click="toDetail(item)" v-for="(item,index) in item.body.items" :key="index" class="exposure item">
               <div class="img">
                 <img v-lazy="item.img_url" alt="" :style="{width:'6.96rem',height:'4.36rem'}">
               </div>
             </a>
           </div>
 
-          <div v-else-if="item.view_type == 'list_two_type13'" :class="[item.view_type, 'box-flex']" :style="{backgroundColor: item.body.bg_color}">
-            <a v-for="(item,index) in item.body.items" :key="index" class="exposure item">
+          <div v-else-if="item.view_type == 'list_two_type13'" :class="[item.view_type, 'box-flex']"
+               :style="{backgroundColor: item.body.bg_color}">
+            <a @click="toDetail(item)" v-for="(item,index) in item.body.items" :key="index" class="exposure item">
               <div class="img">
                 <img v-lazy="item.img_url" alt="" :style="{width:'3.44rem',height:'2.8rem'}">
+              </div>
+              <div class="info bgw align-center">
+                <div class="name">{{item.product_name}}</div>
+                <div class="brief">{{item.product_brief}}</div>
+                <div class="price">
+                  {{ item.product_price }}
+                  <span style="font-size: .2rem">
+                    {{ item.show_price_qi ? '起' : ''}}
+                  </span>
+                  <span v-if="item.product_price < item.product_org_price" class="price old"><s>{{item.product_org_price}}</s></span>
+                </div>
+                <div class="buybtn mauto"> 立即购买</div>
               </div>
             </a>
           </div>
 
-          <div v-else-if="item.view_type == 'list_two_type1'" class="list_two_type1 box-flex" :style="{backgroundColor:item.body.bg_color}">
-            <a class="exposure item" v-for="(item,index) in item.body.items" :key="index">
+          <div v-else-if="item.view_type == 'list_two_type1'" class="list_two_type1 box-flex"
+               :style="{backgroundColor:item.body.bg_color}">
+            <a @click="toDetail(item)" class="exposure item" v-for="(item,index) in item.body.items" :key="index">
               <div class="img"><img class="big" v-lazy="item.img_url" style="width: 3.6rem;height: 3.6rem;"></div>
               <div class="info">
                 <div class="name">{{item.product_name}}</div>
@@ -49,9 +65,11 @@
             </a>
           </div>
 
-          <div v-else-if="item.view_type == 'list_three_type4'" :class="item.view_type" :style="{backgroundColor:item.body.bg_color}">
+          <div v-else-if="item.view_type == 'list_three_type4'" :class="item.view_type"
+               :style="{backgroundColor:item.body.bg_color}">
             <div class="goods-list">
-              <a v-for="(item,index) in item.body.items" :key="index" class="exposure item item-xs">
+              <a @click="toDetail(item)" v-for="(item,index) in item.body.items" :key="index"
+                 class="exposure item item-xs">
                 <div class="img">
                   <img class="big" v-lazy="item.img_url" style="width: 2.21rem;height: 2.21rem;">
                 </div>
@@ -81,35 +99,49 @@
         items: [],
         cells_auto_fill: null,
         divider_line: null,
-        list_two_type13:null,
-        list_two_type1:null,
-        list_one_type14:null,
-        list_three_type4:null,
-        sections:[]
+        list_two_type13: null,
+        list_two_type1: null,
+        list_one_type14: null,
+        list_three_type4: null,
+        sections: []
       }
     },
     components: {Carousel},
     props: ['className', 'apiUrl'],
     created() {
-        this.axios({
-          method: 'get',
-          url: `/api/home/${this.apiUrl}.json`
-        }).then((res) => {
-          if (res.data.result == 'ok') {
-            let sections = res.data.data.data.sections
-            this.sections = sections
+      this.axios({
+        method: 'get',
+        url: `/api/home/${this.apiUrl}.json`
+      }).then((res) => {
+        if (res.data.result == 'ok') {
+          let sections = res.data.data.data.sections
+          this.sections = sections
+        }
+      }).catch((err) => {
+        console.log('err' + err)
+      })
+    },
+    methods: {
+      toDetail(item) {
+        this.$router.push({
+          name: 'detail',
+          params: {
+            id: item.action.path,
+            name: item.product_name,
+            price: item.product_price,
+            imgurl: item.img_url
           }
-        }).catch((err) => {
-          console.log('err' + err)
         })
+      }
     }
   }
 </script>
 
 <style lang="scss">
-  div[class*='card'] > div{
+  div[class*='card'] > div {
     margin: 0 auto;
   }
+
   .component-list-main {
     padding-bottom: 60px;
   }
@@ -176,35 +208,43 @@
     height: auto;
     margin: 0 auto;
   }
+
   .component-list-main .list_two_type1 .item:first-child {
     margin-right: .04rem;
   }
+
   .component-list-main .list_two_type1 .item {
     width: 3.6rem;
   }
+
   .component-list-main .list_two_type1 .img {
     width: 3.6rem;
     height: 3.6rem;
   }
+
   .component-list-main .info {
     padding: .2rem .27rem;
-    text-align: left;
+    text-align: center;
   }
+
   .component-list-main .brief, .component-list-main .name {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .component-list-main .name {
     font-size: .28rem;
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
   }
+
   .component-list-main .price .old {
     display: inline-block;
     margin: 0 .1rem;
     font-size: .22rem;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
   }
+
   .price:before {
     content: "\A5";
     position: absolute;
@@ -213,6 +253,19 @@
     font-size: .76em;
     text-decoration: none;
   }
+
+  .component-list-main .buybtn {
+    width: 2rem;
+    margin: 0 auto;
+    background: #ea625b;
+    border-radius: .05rem;
+    text-align: center;
+    color: #fff;
+    font-size: .24rem;
+    padding: .16rem 0;
+    font-weight: 700;
+  }
+
   .component-list-main .list_one_type14 .item {
     padding: 0 .12rem;
   }

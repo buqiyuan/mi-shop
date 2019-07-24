@@ -55,6 +55,7 @@
 <style lang="scss" scoped>
   .login-container {
     padding: 40px .5rem 0;
+    text-align: center;
 
     .login-from-container {
       input {

@@ -4,7 +4,7 @@
       <div class="user">
         <v-list-tile>
           <v-list-tile-avatar size="50">
-            <img src="https://s1.mi-img.com/mfsv2/download/fdsc3/p01OnXyo8fvC/tgEbekx1EPsj4Q.jpg?thumb=150x150">
+            <img v-lazy="'https://s1.mi-img.com/mfsv2/download/fdsc3/p01OnXyo8fvC/tgEbekx1EPsj4Q.jpg?thumb=150x150'">
           </v-list-tile-avatar>
 
           <v-list-tile-content>
@@ -63,6 +63,7 @@
     background: #f5f5f5;
 
     .user, .user-order, .shop-manage {
+      text-align: center;
       background: white;
     }
 

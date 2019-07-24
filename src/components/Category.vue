@@ -22,7 +22,9 @@
 
             <div v-if="item.view_type == 'cells_auto_fill'" class="cells_auto_fill">
               <a class="exposure items">
-                <img v-for="i in item.body.items" :src="i.img_url" :style="{ height: item.body.h == 0 ? '.8rem' : item.body.h / 100 + 'rem'}" style="height: .8rem; width: 5rem;">
+                <img v-for="i in item.body.items" v-lazy="i.img_url"
+                     :style="{ height: item.body.h == 0 ? '.8rem' : item.body.h / 100 + 'rem'}"
+                     style="height: .8rem; width: 5rem;">
               </a>
             </div>
 
@@ -33,12 +35,12 @@
             <div v-else-if="item.view_type == 'category_group'" class="category_group box-flex">
               <div class="box">
                 <div v-for="(item,index) in item.body.items" class="product">
-                  <a class="exposure item">
-                  <div class="img">
-                    <img class="big" :src="item.img_url">
-                  </div>
-                  <div class="name">{{item.product_name}}</div>
-                </a></div>
+                  <a @click="toDetail(item)" class="exposure item">
+                    <div class="img">
+                      <img class="big" v-lazy="item.img_url">
+                    </div>
+                    <div class="name">{{item.product_name}}</div>
+                  </a></div>
               </div>
             </div>
           </div>
@@ -46,21 +48,21 @@
 
           <!--<v-subheader :data-id="i.category_id">{{i.category_list[0].body.category_name}}</v-subheader>-->
           <!--<v-container fluid grid-list-xs>-->
-            <!--<v-layout row wrap>-->
-              <!--<v-flex-->
-                <!--v-for="(item,index) in i.category_list[1].body.items"-->
-                <!--:key="index"-->
-                <!--xs4-->
-              <!--&gt;-->
-                <!--<img-->
-                  <!--:src="item.img_url"-->
-                  <!--alt="lorem"-->
-                  <!--class="image"-->
-                  <!--height="100%"-->
-                  <!--width="100%"-->
-                <!--&gt;-->
-              <!--</v-flex>-->
-            <!--</v-layout>-->
+          <!--<v-layout row wrap>-->
+          <!--<v-flex-->
+          <!--v-for="(item,index) in i.category_list[1].body.items"-->
+          <!--:key="index"-->
+          <!--xs4-->
+          <!--&gt;-->
+          <!--<img-->
+          <!--:src="item.img_url"-->
+          <!--alt="lorem"-->
+          <!--class="image"-->
+          <!--height="100%"-->
+          <!--width="100%"-->
+          <!--&gt;-->
+          <!--</v-flex>-->
+          <!--</v-layout>-->
           <!--</v-container>-->
         </div>
       </div>
@@ -70,8 +72,9 @@
 
 <script>
   import SearchBar from '@/components/SearchBar'
+
   export default {
-    components:{SearchBar},
+    components: {SearchBar},
     data() {
       return {
         cateid: 1,
@@ -91,6 +94,17 @@
       })
     },
     methods: {
+      toDetail(item) {
+        this.$router.push({
+          name: 'detail',
+          params: {
+            id: item.action.path,
+            name: item.product_name,
+            price: item.action.path.slice(-2) + 99,
+            imgurl: item.img_url
+          }
+        })
+      },
       selectItem(id) {//点击选中左边某一项，并定位右边元素位置
         this.cateid = id
         Array.from(document.querySelectorAll('.category_title')).find((ele) => {
@@ -184,15 +198,18 @@
       }
     }
   }
+
   .component-list-main .cells_auto_fill .items {
-    height: auto!important;
+    height: auto !important;
     display: block;
   }
+
   .component-list-main img {
     display: block;
     width: 100%;
     height: auto;
   }
+
   .component-list-main .category_title {
     background: #fff;
     font-size: .28rem;
@@ -203,9 +220,11 @@
     line-height: 1.28rem;
     overflow: hidden;
   }
+
   .component-list-main .category_title span {
     position: relative;
   }
+
   .component-list-main .category_title {
     background: #fff;
     font-size: .28rem;
@@ -216,6 +235,7 @@
     line-height: 1.28rem;
     overflow: hidden;
   }
+
   .component-list-main .category_title span:after, .component-list-main .category_title span:before {
     content: "";
     position: absolute;
@@ -224,33 +244,39 @@
     width: 6.4px;
     width: .4rem;
     border-top: 1px solid #e0e0e0;
-    transform: translate3d(-150%,-50%,0);
-    -webkit-transform: translate3d(-150%,-50%,0);
+    transform: translate3d(-150%, -50%, 0);
+    -webkit-transform: translate3d(-150%, -50%, 0);
   }
+
   .component-list-main .category_title span:after {
     left: auto;
     right: 0;
-    transform: translate3d(150%,-50%,0);
-    -webkit-transform: translate3d(150%,-50%,0);
+    transform: translate3d(150%, -50%, 0);
+    -webkit-transform: translate3d(150%, -50%, 0);
   }
+
   .component-list-main .category_group {
     background: #fff;
     margin: -.06rem 0 0;
   }
+
   .box-flex {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
   }
+
   .component-list-main .category_group .box {
     width: 100%;
     overflow: hidden;
   }
-  .box-flex>*, .box-inline-flex>* {
+
+  .box-flex > *, .box-inline-flex > * {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
   }
+
   .component-list-main .category_group .product {
     float: left;
     width: 33.333333333333336%;
@@ -259,6 +285,7 @@
     margin-bottom: .3rem;
     overflow: hidden;
   }
+
   .component-list-main .category_group .product .img {
     width: 1rem;
     height: 1rem;
@@ -266,24 +293,29 @@
     background: #fff;
     overflow: hidden;
   }
+
   .component-list-main .img {
     position: relative;
     overflow: hidden;
   }
+
   .component-list-main .category_group .product .img img {
     width: 100%;
   }
+
   .component-list-main .category_group .name {
     margin-top: .28rem;
     white-space: nowrap;
     font-size: .23rem;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
   }
+
   .component-list-main .brief, .component-list-main .name {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   .component-list-main .category_title {
     background: #fff;
     font-size: .28rem;
@@ -294,6 +326,7 @@
     line-height: 1.28rem;
     overflow: hidden;
   }
+
   .component-list-main .category_title span {
     position: relative;
   }

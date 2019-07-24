@@ -2,7 +2,9 @@
   <div class="app">
     <!--<content-view></content-view>-->
     <!--<request-loding></request-loding>-->
-<router-view></router-view>
+<transition>
+  <router-view></router-view>
+</transition>
   </div>
 </template>
 

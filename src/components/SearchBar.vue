@@ -5,7 +5,7 @@
         <v-card>
           <v-toolbar color="white" flat>
             <v-btn icon light>
-              <v-icon color="grey darken-2">arrow_back</v-icon>
+              <v-icon color="grey darken-2" @click="$router.go(-1)">arrow_back</v-icon>
             </v-btn>
 
               <v-toolbar-title class="grey--text text--darken-4">
