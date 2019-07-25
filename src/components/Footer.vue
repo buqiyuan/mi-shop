@@ -17,7 +17,9 @@
           <div>分类</div>
         </router-link>
         <router-link to="/shopcart" class="flex-item">
-          <div class="icon-shop-cart app-bottom-icon"></div>
+          <div class="icon-shop-cart app-bottom-icon">
+            <div class="bubble-num">{{cartTotal}}</div>
+          </div>
           <div>购物车</div>
         </router-link>
         <router-link to="/mine" class="flex-item">
@@ -37,6 +39,11 @@
     data() {
       return {
         bottomNav: 'home'
+      }
+    },
+    computed:{
+      cartTotal(){
+        return this.$store.getters.getCartTotal
       }
     },
     watch: {
@@ -138,7 +145,21 @@
           }
 
           &.icon-shop-cart {
+            position: relative;
             background-image: url("../assets/shop_cart.png");
+            .bubble-num{
+              position: absolute;
+              top: 0;
+              right: -0.13rem;
+              width: 0.28rem;
+              height: 0.28rem;
+              text-align: center;
+              color: white;
+              font-size: 0.18rem;
+              line-height: 0.28rem;
+              border-radius: 0.28rem;
+              background-color: #ed4d41;
+            }
           }
 
           &.icon-mine {
