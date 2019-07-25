@@ -22,12 +22,11 @@
               color="#ff6700"
               :value="item.id"
             ></v-checkbox>
-            <div class="goods-img">
-              <img :src="item.imgurl"
-                   alt="">
+            <div @click="toDetail(item,'cartlist')" class="goods-img">
+              <img :src="item.imgurl" alt="">
             </div>
             <div class="goods-info">
-              <div class="goods-name">{{item.name}}</div>
+              <div @click="toDetail(item,'cartlist')" class="goods-name">{{item.name}}</div>
               <div class="goods-price">售价：{{item.price}}</div>
               <div class="goods-quantity">
                 <div>
@@ -35,7 +34,7 @@
                   <input type="number" readonly :value="$store.getters.getCartItemTotal(item.id)">
                   <button @click="add(item.id)">+</button>
                 </div>
-                <v-icon class="delete-item">delete_outline</v-icon>
+                <v-icon @click="deleteGoods(item.id,index)" class="delete-item">delete_outline</v-icon>
               </div>
             </div>
           </div>
@@ -48,7 +47,8 @@
                :style="{width:recommendTopImg.w / 100 + 'rem',height:recommendTopImg.h/100+'rem'}">
         </div>
         <div class="recommend-list">
-          <div v-for="(item,index) in recommendList" :key="index" class="goods-item">
+          <div @click="toDetail(item,'recommend')" v-for="(item,index) in recommendList" :key="index"
+               class="goods-item">
             <a class="exposure">
               <div class="goods-img-box"><img class="lazy" :src="item.image_url"></div>
               <div class="goods-info">
@@ -91,19 +91,21 @@
     data() {
       return {
         flag: false,//判断点击的CheckBox是购物车列表的还是全选的，false为全选的
-        selectedAll:false,//全选状态
+        selectedAll: false,//全选状态
         selected: [],//列表的CheckBox状态
-        cartList: this.$store.getters.getCartItems,
         isLogin: true,
         recommendTopImg: null,
         recommendList: null
       }
     },
     computed: {
+      cartList() {
+        return this.$store.getters.getCartItems
+      },
       cartCount() {
         return this.$store.getters.getCartTotal
       },
-      totalPrice(){
+      totalPrice() {
         return this.$store.getters.calcTotalPrice(this.selected)
       }
     },
@@ -112,14 +114,14 @@
         this.$store.commit('setSelectedStatus', this.selected)
         this.updateSelectedAllStatus()
       },
-      selectedAll(val){//监听全选或取消全选
+      selectedAll(val) {//监听全选或取消全选
         if (val) {
           this.selected = []
           this.cartList.forEach(item => {
             this.selected.push(item.id)
           })
         } else {
-          if (!this.flag){//判断是否是单击列表的CheckBox，如果点击的是列表中的CheckBox则不清空，否则便是单击全选CheckBox清空
+          if (!this.flag) {//判断是否是单击列表的CheckBox，如果点击的是列表中的CheckBox则不清空，否则便是单击全选CheckBox清空
             this.selected = []
           }
         }
@@ -133,6 +135,12 @@
       },
       subtract(id) {//减少购买数量
         this.$store.commit('subtractQuantity', id)
+      },
+      deleteGoods(id, index) {//删除购物车中的商品
+        this.cartList.splice(index, 1)
+        this.$store.commit('deleteGoodsFromCart', id)
+        //删除商品后更新选中状态
+        this.getSelected()
       },
       getRecommend() {//获取推荐列表数据
         this.axios.get('/api/recommendBlank.json').then(res => {
@@ -152,14 +160,35 @@
         })
         this.selected = selectedIds
       },
-      updateSelectedAllStatus(){//判断是否全选状态
-        if (this.selected.length != this.cartList.length){
+      updateSelectedAllStatus() {//判断是否全选状态
+        if (this.selected.length != this.cartList.length) {
           this.flag = true
           this.selectedAll = false
         } else {
           this.flag = false
           this.selectedAll = true
         }
+      }, toDetail(item, type) {//去商品详情页
+        let params = {}
+        if (type == 'recommend') {
+          params = {
+            id: item.action.path,
+            name: item.name,
+            price: item.price,
+            imgurl: item.image_url
+          }
+        } else if (type == 'cartlist') {
+          params = {
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            imgurl: item.imgurl,
+          }
+        }
+        this.$router.push({
+          name: 'detail',
+          params
+        })
       }
     },
     created() {
@@ -293,6 +322,7 @@
           }
         }
       }
+
       /*购物车列表start*/
       .shopcart-list {
         background-color: #f5f5f5;
@@ -372,6 +402,7 @@
           }
         }
       }
+
       /*购物车列表end*/
     }
 
@@ -383,30 +414,37 @@
       padding-left: .2rem;
       z-index: 999;
       width: 100vw;
-      box-shadow: 0 1px 1px -1px rgba(0,0,0,.3);
+      box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .3);
       background-color: white;
-      .flex-box{
+
+      .flex-box {
         display: flex;
         font-size: 0.26rem;
-        .v-input--selection-controls{
+
+        .v-input--selection-controls {
           margin: 0;
           padding: 0;
         }
-        & > div{
+
+        & > div {
           flex: 1;
           padding: .22rem;
-          &.shop-total{
+
+          &.shop-total {
             align-self: center;
-            i{
+
+            i {
               color: #ff6700;
             }
           }
-          &.to-pay{
+
+          &.to-pay {
             display: flex;
             justify-content: center;
             color: white;
             background: #ff6700;
-            div{
+
+            div {
               align-self: center;
               justify-items: center;
             }

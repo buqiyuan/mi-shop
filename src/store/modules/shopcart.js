@@ -50,7 +50,6 @@ const mutations = {
   },
   addQuantity(state, id) {//增加购买数量
     let item = state.cartItems.find(item => item.id == id)
-    console.log(item)
     item.count++
     localStorage.setItem('cartItems',JSON.stringify(state.cartItems))
   },
@@ -70,6 +69,13 @@ const mutations = {
       item.selected = true
     })
     localStorage.setItem('cartItems',JSON.stringify(state.cartItems))
+  },
+  deleteGoodsFromCart(state,id){//从购物车里删除某一项商品
+    let itemIndex = state.cartItems.findIndex(item => item.id == id)
+    if (itemIndex != -1){
+      state.cartItems.splice(itemIndex,1)
+      localStorage.setItem('cartItems',JSON.stringify(state.cartItems))
+    }
   }
 }
 

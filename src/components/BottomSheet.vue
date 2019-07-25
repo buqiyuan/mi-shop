@@ -45,6 +45,10 @@
         </div>
       </div>
     </v-bottom-sheet>
+    <div class="add-success-toast">
+      <v-icon>check_circle_outline</v-icon>
+      <div>加入购物车成功</div>
+    </div>
   </div>
 </template>
 
@@ -71,6 +75,12 @@
         this.count = this.count <= 1 ? 1 : --this.count
       },
       addToShopcart() {//添加到购物车
+        //弹出购买成功提示框
+        document.querySelector('.add-success-toast').style.visibility = 'visible'
+        //1200ms后隐藏购买成功提示框
+        setTimeout(function () {
+          document.querySelector('.add-success-toast').style.visibility = 'hidden'
+        },1200)
         this.$store.commit('addGoodsToCart', {
           id: this.id,
           name: this.name,
@@ -264,6 +274,22 @@
       text-align: center;
       width: 80%;
       font-size: .28rem;
+    }
+  }
+  .add-success-toast{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    visibility:hidden;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,.66);
+    text-align: center;
+    line-height: .4rem;
+    padding: .2rem .4rem;
+    color: white;
+    border-radius: 5px;
+    .theme--light.v-icon{
+      color: #fff;
     }
   }
 </style>

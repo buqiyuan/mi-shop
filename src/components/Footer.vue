@@ -1,61 +1,32 @@
 <template>
-  <v-card flat>
-
-    <!--<category v-if="bottomNav == 'category'"></category>-->
-    <!--<shop-cart v-if="bottomNav == 'ShopCart'"></shop-cart>-->
-    <!--<mine v-if="bottomNav == 'mine'"></mine>-->
+  <div class="">
     <transition>
       <keep-alive>
-    <router-view></router-view>
+        <router-view></router-view>
       </keep-alive>
     </transition>
-    <v-bottom-nav
-      :active.sync="bottomNav"
-      :value="true"
-      fixed
-      color="transparent"
-    >
-      <v-btn
-        color="#ff6700"
-        flat
-        value="home"
-        @click="$router.push('home')"
-      >
-        <span>首页</span>
-        <v-icon>home</v-icon>
-      </v-btn>
 
-      <v-btn
-        color="#ff6700"
-        flat
-        value="category"
-        @click="$router.push('category')"
-      >
-        <span>分类</span>
-        <v-icon>image_search</v-icon>
-      </v-btn>
-
-      <v-btn
-        color="#ff6700"
-        flat
-        value="ShopCart"
-        @click="$router.push('shopcart')"
-      >
-        <span>购物车</span>
-        <v-icon>shopping_cart</v-icon>
-      </v-btn>
-
-      <v-btn
-        color="#ff6700"
-        flat
-        value="mine"
-        @click="$router.push('mine')"
-      >
-        <span>我的</span>
-        <v-icon>person_outline</v-icon>
-      </v-btn>
-    </v-bottom-nav>
-  </v-card>
+    <div class="bottom-nav-container">
+      <div class="bottom-nav">
+        <router-link to="/home" class="flex-item">
+          <div class="icon-home app-bottom-icon"></div>
+          <div>首页</div>
+        </router-link>
+        <router-link to="/category" class="flex-item">
+          <div class="icon-category app-bottom-icon"></div>
+          <div>分类</div>
+        </router-link>
+        <router-link to="/shopcart" class="flex-item">
+          <div class="icon-shop-cart app-bottom-icon"></div>
+          <div>购物车</div>
+        </router-link>
+        <router-link to="/mine" class="flex-item">
+          <div class="icon-mine app-bottom-icon"></div>
+          <div>我的</div>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -67,12 +38,114 @@
       return {
         bottomNav: 'home'
       }
+    },
+    watch: {
+      // '$route': {
+      //   handler: function (to, from) {
+      //     this.$nextTick(function () { //页面加载完成后执行
+      //       console.log(to)
+      //       if (to.name == 'home') {
+      //
+      //       }else if (to.name == 'category'){
+      //
+      //       } else if (to.name == 'shopcart'){
+      //
+      //       } else if (to.name == 'mine'){
+      //
+      //       }
+      //     })
+      //   },
+      //   immediate: true//立即执行watch
+      // }
+    },
+    mounted() {
+
+    },
+    methods: {
+      // clickBottomNavItem(e) {
+      //   let item = e.currentTarget
+      //   Array.from(item.parentElement.children).forEach(item => {
+      //     item.classList.remove('on')
+      //     item.querySelector("div[class^='icon']").classList.remove('active')
+      //   })
+      //   item.classList.add('on')
+      //   item.querySelector("div[class^='icon']").classList.add('active')
+      // }
     }
   }
 </script>
 
-<style scoped>
-  .v-item-group.v-bottom-nav .v-btn {
-    background: white !important;
+<style lang="scss" scoped>
+  .bottom-nav-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 999;
+    width: 100vw;
+    height: 56px;
+
+    .bottom-nav {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      .flex-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &.router-link-active {
+          color: #ff6700;
+
+          .icon-home {
+            background-image: url("../assets/home_active.png");
+          }
+
+          .icon-category {
+            background-image: url("../assets/cate_active.png");
+          }
+
+          .icon-shop-cart {
+            background-image: url("../assets/shop_cart_active.png");
+          }
+
+          .icon-mine {
+            background-image: url("../assets/mine_active.png");
+          }
+        }
+
+        & > div {
+          flex: 1;
+          align-items: center;
+
+          &.app-bottom-icon {
+            width: .4rem;
+            height: .4rem;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: contain;
+          }
+
+          &.icon-home {
+            background-image: url("../assets/home.png");
+          }
+
+          &.icon-category {
+            background-image: url("../assets/cate.png");
+          }
+
+          &.icon-shop-cart {
+            background-image: url("../assets/shop_cart.png");
+          }
+
+          &.icon-mine {
+            background-image: url("../assets/mine.png");
+          }
+        }
+      }
+    }
   }
 </style>

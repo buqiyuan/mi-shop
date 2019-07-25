@@ -30,7 +30,7 @@
           <img src="https://i.alipayobjects.com/common/favicon/favicon.ico" alt="">
         </a>
         <a href="">
-          <img src="https://hbimg.huabanimg.com/508c4e56c6e4abbe7f7373ccff11ec153be6b47e1689-Eu112g_fw658" alt="">
+          <img src="../assets/weixin.png" alt="">
         </a>
       </div>
       <div class="other-links-area">

@@ -44,26 +44,6 @@
               </div>
             </div>
           </div>
-
-
-          <!--<v-subheader :data-id="i.category_id">{{i.category_list[0].body.category_name}}</v-subheader>-->
-          <!--<v-container fluid grid-list-xs>-->
-          <!--<v-layout row wrap>-->
-          <!--<v-flex-->
-          <!--v-for="(item,index) in i.category_list[1].body.items"-->
-          <!--:key="index"-->
-          <!--xs4-->
-          <!--&gt;-->
-          <!--<img-->
-          <!--:src="item.img_url"-->
-          <!--alt="lorem"-->
-          <!--class="image"-->
-          <!--height="100%"-->
-          <!--width="100%"-->
-          <!--&gt;-->
-          <!--</v-flex>-->
-          <!--</v-layout>-->
-          <!--</v-container>-->
         </div>
       </div>
     </div>
@@ -100,7 +80,7 @@
           params: {
             id: item.action.path,
             name: item.product_name,
-            price: item.action.path.slice(-2) + 99,
+            price: ~~item.action.path.slice(-2) + '99',
             imgurl: item.img_url
           }
         })
