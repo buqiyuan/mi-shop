@@ -8,10 +8,10 @@
         <p>登录后享受更多优惠</p>
         <p>去登陆 ></p>
       </router-link>
-      <div v-if="cartCount < 1" class="to-shpping">
+      <router-link to="/home" v-if="cartCount < 1" tag="div" class="to-shpping">
         <span>购物车还是空的</span>
         <span>去逛逛</span>
-      </div>
+      </router-link>
       <div>
         <!--购物车列表start-->
         <div class="shopcart-list">
@@ -88,6 +88,7 @@
   import SearchBar from '@/components/SearchBar'
 
   export default {
+    components: {SearchBar},
     data() {
       return {
         flag: false,//判断点击的CheckBox是购物车列表的还是全选的，false为全选的
@@ -99,18 +100,18 @@
       }
     },
     computed: {
-      cartList() {
+      cartList() {//商品列表
         return this.$store.getters.getCartItems
       },
-      cartCount() {
+      cartCount() {//商品总数量
         return this.$store.getters.getCartTotal
       },
-      totalPrice() {
+      totalPrice() {//商品总价格
         return this.$store.getters.calcTotalPrice(this.selected)
       }
     },
     watch: {
-      selected() {
+      selected() {//监听CheckBox选中状态
         this.$store.commit('setSelectedStatus', this.selected)
         this.updateSelectedAllStatus()
       },
@@ -128,7 +129,6 @@
         return !val
       }
     },
-    components: {SearchBar},
     methods: {
       add(id) {//增加购买数量
         this.$store.commit('addQuantity', id)

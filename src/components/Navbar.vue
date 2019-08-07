@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-header nav-active">
+  <div class="nav-header">
     <v-toolbar
       color="#f2f2f2"
       dark
@@ -43,11 +43,15 @@
       </div>
     </v-toolbar>
 
-    <v-tabs-items touchless v-model="active">
+    <v-tabs-items v-model="active">
 
       <home-tabs v-for="(item,index) in apis"
-                :key="index" :className="'card'+(index+1)" :apiUrl="item"></home-tabs>
+                 :key="index" :className="'card'+(index+1)" :apiUrl="item"></home-tabs>
     </v-tabs-items>
+    <!--回到顶部-->
+    <div class="back-top" @click="backTop">
+      <img src="../assets/top.png" alt="">
+    </div>
   </div>
 </template>
 
@@ -70,14 +74,50 @@
         }
       })
     },
-    watch: {
-      active: function (val, oldval) {
-        console.log(val)
+    activated() {//keep-alive 组件激活时调用。
+      window.addEventListener('scroll', this.scrollEvent)
+    },
+    deactivated() {//keep-alive 组件停用时调用。
+      window.removeEventListener('scroll', this.scrollEvent)
+    },
+    methods: {
+      backTop() {
+        document.body.scrollIntoView({
+          block: 'start',
+          behavior: 'auto'
+        })
+      },
+      scrollEvent() {
+        let top = document.querySelector('.nav-header').getBoundingClientRect().top
+        if (top < -800) {
+          document.querySelector('.back-top').style.display = 'block'
+        } else {
+          document.querySelector('.back-top').style.display = 'none'
+        }
       }
     }
   }
 </script>
 
 <style lang="scss" scoped>
+  .nav-header {
+    .nav-active {
+      padding-top: .2rem;
+    }
+
+    .back-top {
+      position: fixed;
+      right: .26rem;
+      bottom: 1.4rem;
+      width: .7rem;
+      height: .7rem;
+      z-index: 999;
+      display: none;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
 
 </style>

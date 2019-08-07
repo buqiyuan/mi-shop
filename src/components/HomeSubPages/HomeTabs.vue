@@ -3,9 +3,7 @@
     <v-tab-item>
       <v-card :class="className" class="component-list-main">
         <div v-for="(item,index) in sections" :key="index">
-
           <Carousel :items="item.body.items" v-if="item.view_type == 'gallery'"></Carousel>
-
           <div v-else-if="item.view_type == 'cells_auto_fill'"
                :style="{width:item.body.w / 100 + 'rem',height:item.body.h / 100 + 'rem'}"
                :class="[item.view_type, 'multi_cell']">
@@ -83,7 +81,6 @@
               </a>
             </div>
           </div>
-
         </div>
       </v-card>
     </v-tab-item>
@@ -133,7 +130,7 @@
           }
         })
       }
-    }
+    },
   }
 </script>
 
@@ -225,6 +222,7 @@
   .component-list-main .info {
     padding: .2rem .27rem;
     text-align: center;
+    background-color: white;
   }
 
   .component-list-main .brief, .component-list-main .name {

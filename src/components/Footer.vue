@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <transition>
+    <transition :name="transitionName">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
@@ -38,33 +38,34 @@
     components: {Navbar},
     data() {
       return {
-        bottomNav: 'home'
+        bottomNav: 'home',
+        transitionName: 'slide-left',
       }
     },
-    computed:{
-      cartTotal(){
+    computed: {
+      cartTotal() {
         return this.$store.getters.getCartTotal
       }
     },
-    watch: {
-      // '$route': {
-      //   handler: function (to, from) {
-      //     this.$nextTick(function () { //页面加载完成后执行
-      //       console.log(to)
-      //       if (to.name == 'home') {
-      //
-      //       }else if (to.name == 'category'){
-      //
-      //       } else if (to.name == 'shopcart'){
-      //
-      //       } else if (to.name == 'mine'){
-      //
-      //       }
-      //     })
-      //   },
-      //   immediate: true//立即执行watch
-      // }
-    },
+    // watch: {
+    // '$route': {
+    //   handler: function (to, from) {
+    //     this.$nextTick(function () { //页面加载完成后执行
+    //       console.log(to)
+    //       if (to.name == 'home') {
+    //
+    //       }else if (to.name == 'category'){
+    //
+    //       } else if (to.name == 'shopcart'){
+    //
+    //       } else if (to.name == 'mine'){
+    //
+    //       }
+    //     })
+    //   },
+    //   immediate: true//立即执行watch
+    // }
+    // },
     mounted() {
 
     },
@@ -78,11 +79,50 @@
       //   item.classList.add('on')
       //   item.querySelector("div[class^='icon']").classList.add('active')
       // }
-    }
+    },
+    watch: {
+      '$route'(to, from) {
+        //判断用户点击底部tabbar进行左右滑动切换
+        if (to.meta.index > from.meta.index) {
+          this.transitionName = 'slide-right';
+        } else {
+          this.transitionName = 'slide-left';
+        }
+      },
+    },
   }
 </script>
 
 <style lang="scss" scoped>
+
+  /*向右滑动*/
+  .slide-right-enter {
+    transform: translate3d(-100%, 0, 0);
+    position: absolute;
+  }
+
+  .slide-left-enter {
+    transform: translate3d(100%, 0, 0);
+    position: absolute;
+  }
+
+  .slide-left-leave-to {
+    transform: translate3d(-100%, 0, 0);
+    position: absolute;
+  }
+
+  .slide-right-leave-to {
+    transform: translate3d(100%, 0, 0);
+    position: absolute;
+  }
+
+  .slide-right-enter-active,
+  .slide-right-leave-active,
+  .slide-left-enter-active,
+  .slide-left-leave-active {
+    transition: all 0.3s ease;
+  }
+
   .bottom-nav-container {
     position: fixed;
     left: 0;
@@ -147,7 +187,8 @@
           &.icon-shop-cart {
             position: relative;
             background-image: url("../assets/shop_cart.png");
-            .bubble-num{
+
+            .bubble-num {
               position: absolute;
               top: 0;
               right: -0.13rem;

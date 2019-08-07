@@ -7,9 +7,9 @@
     </div>
     <div class="login-form">
       <form class="login-from-container">
-        <input class="username" type="text" placeholder="邮箱/手机号码/小米ID">
-        <input class="password" type="password" placeholder="密码">
-        <input class="login-btn" type="button" value="登陆">
+        <input class="username" type="text" v-model="username" placeholder="邮箱/手机号码/小米ID">
+        <input class="password" type="password" v-model="password" placeholder="密码">
+        <input class="login-btn" @click="loginIn" type="button" value="登陆">
         <input class="login-other" type="button" value="手机短信登陆/注册">
       </form>
     </div>
@@ -48,7 +48,18 @@
 
 <script>
   export default {
-    name: "Login"
+    name: "Login",
+    data(){
+      return{
+        username: '',
+        password: ''
+      }
+    },
+    methods:{
+      loginIn(){
+
+      }
+    }
   }
 </script>
 

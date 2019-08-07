@@ -20,6 +20,16 @@ import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont'
 import VueLazyload from 'vue-lazyload'
 
+axios.defaults.baseURL = 'https://buqiyuan.xyz/my-demo/mobile-mi/dist';
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: require('./assets/placeholder.png'),
+  loading: require('./assets/placeholder.png'),
+  attempt: 1
+})
+
 Vue.use(VueLazyload)
 
 Vue.use(VueAxios, axios)

@@ -45,7 +45,7 @@
         </div>
       </div>
     </v-bottom-sheet>
-    <div class="add-success-toast">
+    <div ref="successToast" class="add-success-toast">
       <v-icon>check_circle_outline</v-icon>
       <div>加入购物车成功</div>
     </div>
@@ -76,10 +76,10 @@
       },
       addToShopcart() {//添加到购物车
         //弹出购买成功提示框
-        document.querySelector('.add-success-toast').style.visibility = 'visible'
+        this.$refs.successToast.style.visibility = 'visible'
         //1200ms后隐藏购买成功提示框
-        setTimeout(function () {
-          document.querySelector('.add-success-toast').style.visibility = 'hidden'
+        setTimeout(() => {
+          this.$refs.successToast.style.visibility = 'hidden'
         },1200)
         this.$store.commit('addGoodsToCart', {
           id: this.id,
