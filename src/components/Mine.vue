@@ -1,52 +1,54 @@
 <template>
-  <v-layout class="mine-container" row>
-    <v-flex>
-      <div class="user">
-        <v-list-tile>
-          <v-list-tile-avatar size="50">
-            <img v-lazy="'https://s1.mi-img.com/mfsv2/download/fdsc3/p01OnXyo8fvC/tgEbekx1EPsj4Q.jpg?thumb=150x150'">
-          </v-list-tile-avatar>
+  <div class="mine">
+    <v-layout class="mine-container" row>
+      <v-flex>
+        <div class="user">
+          <v-list-tile>
+            <v-list-tile-avatar size="50">
+              <img v-lazy="'https://s1.mi-img.com/mfsv2/download/fdsc3/p01OnXyo8fvC/tgEbekx1EPsj4Q.jpg?thumb=150x150'">
+            </v-list-tile-avatar>
 
-          <v-list-tile-content>
-            <v-list-tile-title>猿计划</v-list-tile-title>
-            <v-list-tile-sub-title>445273368</v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </div>
-      <div class="user-order">
-        <div>我的订单</div>
-        <div>全部订单 ></div>
-      </div>
-      <ul class="shop-manage">
-        <li class="dfk">
-          <p></p>
-          <p>待付款</p>
-        </li>
-        <li class="dsh">
-          <p></p>
-          <p>待收货</p>
-        </li>
-        <li class="thx">
-          <p></p>
-          <p>退换修</p>
-        </li>
-      </ul>
-      <ul class="items">
-        <li class="i-member"><a href="javascript:void(0)">会员中心</a></li>
-        <li class="i-wallet"><a href="javascript:void(0)">我的优惠</a></li>
-      </ul>
-      <ul class="items">
-        <li class="i-service"><a href="javascript:void(0)">服务中心</a></li>
-        <li class="i-mihome"><a href="javascript:void(0)">小米之家</a></li>
-      </ul>
-      <ul class="items">
-        <li class="i-fcode"><a href="javascript:void(0)">F码通道</a></li>
-      </ul>
-      <ul class="items">
-        <li class="i-setting"><a href="javascript:void(0)">设置</a></li>
-      </ul>
-    </v-flex>
-  </v-layout>
+            <v-list-tile-content>
+              <v-list-tile-title>猿计划</v-list-tile-title>
+              <v-list-tile-sub-title>445273368</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </div>
+        <div class="user-order">
+          <div>我的订单</div>
+          <div>全部订单 ></div>
+        </div>
+        <ul class="shop-manage">
+          <li class="dfk">
+            <p></p>
+            <p>待付款</p>
+          </li>
+          <li class="dsh">
+            <p></p>
+            <p>待收货</p>
+          </li>
+          <li class="thx">
+            <p></p>
+            <p>退换修</p>
+          </li>
+        </ul>
+        <ul class="items">
+          <li class="i-member"><a href="javascript:void(0)">会员中心</a></li>
+          <li class="i-wallet"><a href="javascript:void(0)">我的优惠</a></li>
+        </ul>
+        <ul class="items">
+          <li class="i-service"><a href="javascript:void(0)">服务中心</a></li>
+          <li class="i-mihome"><a href="javascript:void(0)">小米之家</a></li>
+        </ul>
+        <ul class="items">
+          <li class="i-fcode"><a href="javascript:void(0)">F码通道</a></li>
+        </ul>
+        <ul class="items">
+          <li class="i-setting"><a href="javascript:void(0)">设置</a></li>
+        </ul>
+      </v-flex>
+    </v-layout>
+  </div>
 </template>
 
 <script>
@@ -58,6 +60,9 @@
 </script>
 
 <style lang="scss" scoped>
+  .mine{
+    width: 100%;
+  }
   .mine-container {
     min-height: 100vh;
     background: #f5f5f5;

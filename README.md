@@ -20,7 +20,7 @@ npm run build
 npm run test
 ```
 
-### Lints and fixes files
+### 在线预览
 ```
-npm run lint
+https://buqiyuan.xyz/mi-shop/
 ```

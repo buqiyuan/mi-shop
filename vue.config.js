@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'https://buqiyuan.xyz/my-demo/mobile-mi/dist',
+        target: 'https://buqiyuan.xyz/',
         ws: true,
         changeOrigin: true,
         pathRewrite: {
@@ -13,6 +13,6 @@ module.exports = {
     }
   },
   publicPath: process.env.NODE_ENV === 'production'
-    ? 'my-demo/mobile-mi/dist/'
+    ? 'mi-shop/'
     : '/'
 }

@@ -16,10 +16,9 @@ export default new Router({
     {
       path: '/',
       component: Home,
-      redirect:'/home',
       children:[
         {
-          path: 'home',
+          path: '',
           name: 'home',
           component: () => import('@/components/Navbar.vue'),
           meta: {

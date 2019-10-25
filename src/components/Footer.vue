@@ -94,32 +94,20 @@
 </script>
 
 <style lang="scss" scoped>
-
   /*向右滑动*/
+  .slide-left-leave-to,
   .slide-right-enter {
     transform: translate3d(-100%, 0, 0);
-    position: absolute;
   }
-
-  .slide-left-enter {
-    transform: translate3d(100%, 0, 0);
-    position: absolute;
-  }
-
-  .slide-left-leave-to {
-    transform: translate3d(-100%, 0, 0);
-    position: absolute;
-  }
-
+  .slide-left-enter,
   .slide-right-leave-to {
     transform: translate3d(100%, 0, 0);
-    position: absolute;
   }
-
   .slide-right-enter-active,
   .slide-right-leave-active,
   .slide-left-enter-active,
   .slide-left-leave-active {
+    position: absolute;
     transition: all 0.3s ease;
   }
 
